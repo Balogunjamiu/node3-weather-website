@@ -6,7 +6,7 @@ const weatherUrl = require('./utils/weatherapp')
 
 
 const app = express()
-
+const port = process.env.PORT || 3000
 const publicDirectoriesPath = path.join(__dirname, '../public') 
 // to change path for the views, define path for express
  const viewsPath = path.join(__dirname, '../templates/views')
@@ -91,6 +91,6 @@ app.get('*', (req,res) =>{
 })
 // app.com
 
-app.listen(3000, () =>{
-    console.log('server is up on port 3000')
+app.listen(port, () =>{
+    console.log('server is up on port 3000' + port)
 })
