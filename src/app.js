@@ -41,7 +41,7 @@ app.get('/help', (req,res)=>{
         name: 'balogun jamiu'
     } )
 })
-app.get('/weather', (req,res)=>{
+app.get('/weather/address=', (req,res)=>{
     if (!req.query.address){
         return res.send({
             error:"you have not provided any location"
